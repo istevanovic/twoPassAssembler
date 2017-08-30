@@ -1,0 +1,29 @@
+#TabelaSimbola
+#symbol type	#ID	#name		#section	#start adr	#size	#flags
+SEG/SYM		0	UND		0		0		0	l
+SEG		1	.text		1		32		60	EXECINSTR, ALLOC
+SYM		2	bp1		1		44		0	l
+SYM		3	bp2		1		76		0	l
+
+#SadrzajSekcija
+<.text>
+05 05 20 00 
+20 11 00 00 
+21 11 00 00 
+21 10 00 00 
+30 01 10 c0 
+07 e7 88 00 
+f7 ff ff ff 
+31 04 29 80 
+32 07 42 40 
+33 0a 53 00 
+34 0d 73 c0 
+36 0c 5a 80 
+37 09 41 c0 
+38 06 28 00 
+39 04 18 80 
+
+
+#rel.text
+#offset	#type	#symbol ID
+

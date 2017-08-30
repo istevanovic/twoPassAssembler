@@ -1,0 +1,19 @@
+.data
+c DEF 300/5
+DB 1, 2, 3
+DW 5+((50+5)-(5-33))
+DB a, 0x20, 0b5
+.text_1
+a DEF 13
+LOADSB R1, R2
+LOAD R5, $20
+LOAD PC, $a
+CALL nepostojecisimbol ; iako simbol ne postoji, bice ubacen u tabelu u drugom prolazu
+.text_2
+CALL a
+CALL $a
+ORG 0x20-0b101+(33-22-(21+3))
+.bss
+DW 5 DUP ?
+.end
+

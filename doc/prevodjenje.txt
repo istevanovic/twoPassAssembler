@@ -1,0 +1,1 @@
+g++ symboltable.cpp symbol.cpp sectiontable.cpp section.cpp relocationtable.cpp relocation.cpp assembler.cpp main.cpp -std=c++0x -g -o asm.out -fpermissive

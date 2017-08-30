@@ -1,0 +1,73 @@
+#TabelaSimbola
+#symbol type	#ID	#name		#section	#start adr	#size	#flags
+SEG/SYM		0	UND		0		0x0		0x0	l
+SEG		1	.data		1		0x0		0xc	WRITE, ALLOC
+SEG		2	.text.1		2		0x0		0x34	EXECINSTR, ALLOC
+SEG		3	.text		3		0x149		0xc	EXECINSTR, ALLOC
+SEG		4	.text.100		4		0x0		0x1c	EXECINSTR, ALLOC
+SYM		5	a		1		0x1f4		0x0	l
+SYM		6	b		1		0xc8		0x0	l
+SYM		7	c		1		0x20		0x0	l
+SYM		8	prom		0		0x0		0x0	g
+SYM		9	x		2		0x4		0x0	l
+SYM		a	y		2		0xc		0x0	l
+SYM		b	nepostojecaprom		0		0x0		0x0	g
+
+#SadrzajSekcija
+<.data>
+f4 01 00 00 
+c8 00 00 00 
+20 00 00 00 
+
+
+<.text.1>
+20 01 00 00 
+20 02 00 00 
+10 01 10 00 
+10 43 20 00 
+10 eb 00 28 
+04 00 00 00 
+09 ee 88 00 
+eb ff ff ff 
+10 83 00 00 
+f4 01 00 00 
+11 e1 00 28 
+00 00 00 00 
+
+
+<.text>
+0f 00 0f 00 
+09 e1 00 00 
+0c 00 00 00 
+
+
+<.text.100>
+10 84 00 28 
+0f 00 00 00 
+03 f1 00 00 
+fc ff ff ff 
+21 01 00 00 
+21 02 00 00 
+31 0e 7c 00 
+
+
+#rel.data
+#offset	#type	#symbol ID
+0x0	A	1
+0x4	A	1
+0x8	A	1
+
+#rel.text.1
+#offset	#type	#symbol ID
+0x14	A	2
+0x20	A	1
+0x28	A	b
+
+#rel.text
+#offset	#type	#symbol ID
+0x151	A	2
+
+#rel.text.100
+#offset	#type	#symbol ID
+0x8	R	8
+

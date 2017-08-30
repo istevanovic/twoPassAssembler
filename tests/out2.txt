@@ -1,0 +1,60 @@
+#TabelaSimbola
+#symbol type	#ID	#name		#section	#start adr	#size	#flags
+SEG/SYM		0	UND		0		0		0	l
+SEG		1	.data		1		0		16	WRITE, ALLOC
+SEG		2	.text_1		2		0		28	EXECINSTR, ALLOC
+SEG		3	.text_2		3		0		16	EXECINSTR, ALLOC
+SEG		4	.bss		4		14		20	WRITE, ALLOC
+SYM		5	c		1		300		0	l
+SYM		6	a		2		13		0	l
+SYM		7	nepostojecisimbol		0		0		0	g
+
+#SadrzajSekcija
+<.data>
+01 00 02 00 
+03 00 58 00 
+00 00 0d 00 
+20 00 00 00 
+
+
+<.text_1>
+10 01 10 18 
+10 e5 88 00 
+10 00 00 00 
+10 e1 88 00 
+01 00 00 00 
+03 e0 00 00 
+fc ff ff ff 
+
+
+<.text_2>
+03 e0 00 00 
+09 00 00 00 
+03 f1 00 00 
+09 00 00 00 
+
+
+<.bss>
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+
+
+#rel.data
+#offset	#type	#symbol ID
+0xa	A	2
+
+#rel.text_1
+#offset	#type	#symbol ID
+0x14	A	7
+
+#rel.text_2
+#offset	#type	#symbol ID
+0x0	A	2
+0x8	R	2
+
+#rel.bss
+#offset	#type	#symbol ID
+
